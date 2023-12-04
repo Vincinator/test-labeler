@@ -19,17 +19,20 @@ build-env:
 - 'get_timestamp'
 - 'get_version'
 - 'get_commit'
+- 'bin/**'
 
-doc:
+docs:
 - '*.md'
 - 'docs/**'
 - 'CODEOWNERS'
+- 'examples/**'
 
-feature:
+features:
 - 'features/**'
 
 tools:
 - 'hack/**'
+- 'tools/**'
 
 logo:
 - 'logo/*'
@@ -43,3 +46,10 @@ repo-key:
 
 checksums:
 - 'checksums.sha256'
+
+packages:
+- 'features/**/pkg.*'
+
+bare-container:
+- 'bare_flavors/**'
+- 'unbase_oci'
